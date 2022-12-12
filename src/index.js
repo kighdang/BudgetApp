@@ -102,7 +102,7 @@ app.post('/api/set_access_token', async function (request, response, next) {
   });
 
   // Create link token 
-  app.post('/api/create_link_token', async function (request, response) {
+  app.post('/link/token/create', async function (request, response) {
     // Get the client_user_id by searching for the current user
     const user = await User.find(...);
     const clientUserId = user.id;
